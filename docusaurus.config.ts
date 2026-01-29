@@ -12,8 +12,8 @@ const config: Config = {
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'Auto-Linkid', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'Nicholandn22', // Usually your GitHub org/user name.
+  projectName: 'docsBasedIn', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -30,12 +30,12 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/Auto-Linkid/docs/tree/main/',
+            'https://github.com/Nicholandn22/docsBasedIn/tree/main/',
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/Auto-Linkid/docs/tree/main/',
+            'https://github.com/Nicholandn22/docsBasedIn/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -61,7 +61,7 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/Auto-Linkid',
+          href: 'https://github.com/Nicholandn22/docsBasedIn',
           label: 'GitHub',
           position: 'right',
         },
@@ -109,7 +109,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/Auto-Linkid',
+              href: 'https://github.com/Nicholandn22/docsBasedIn',
             },
           ],
         },
