@@ -50,7 +50,7 @@ const config: Config = {
       title: 'BasedLink',
       logo: {
         alt: 'BasedLink Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {

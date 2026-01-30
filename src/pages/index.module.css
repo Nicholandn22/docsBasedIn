@@ -21,3 +21,25 @@
   align-items: center;
   justify-content: center;
 }
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.sectionAlt {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.placeholder {
+  background-color: var(--ifm-color-emphasis-200);
+  border: 2px dashed var(--ifm-color-emphasis-400);
+  border-radius: 8px;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
