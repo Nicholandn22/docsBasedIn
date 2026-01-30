@@ -30,12 +30,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/Nicholandn22/docsBasedIn/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/Nicholandn22/docsBasedIn/tree/main/',
+            'https://github.com/Auto-Linkid',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -43,6 +38,8 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  clientModules: [require.resolve('./src/client-modules/coming-soon.ts')],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
@@ -59,9 +56,8 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/Nicholandn22/docsBasedIn',
+          href: 'https://github.com/Auto-Linkid',
           label: 'GitHub',
           position: 'right',
         },
@@ -79,7 +75,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/',
             },
             {
               label: 'Quick Start',
@@ -92,11 +88,11 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/auto-linkid',
+              href: '#coming-soon',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/auto_linkid',
+              href: '#coming-soon',
             },
           ],
         },
@@ -104,12 +100,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/Nicholandn22/docsBasedIn',
+              href: 'https://github.com/Auto-Linkid',
             },
           ],
         },

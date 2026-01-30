@@ -1,18 +1,30 @@
 .carouselContainer {
     position: relative;
-    width: 100%;
-    max-width: 800px;
+    width: 80vw;
+    max-width: 1400px;
+    /* Optional safety cap for very large screens, can be removed if strictly 80% desired */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Improve touch action interaction */
+    touch-action: pan-y;
+}
+
+.carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease-out;
+    width: 100%;
 }
 
 .carouselImage {
     width: 100%;
     height: auto;
     display: block;
-    transition: opacity 0.5s ease-in-out;
+    flex-shrink: 0;
+    /* Prevent image dragging interfering with swipe */
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .navButton {

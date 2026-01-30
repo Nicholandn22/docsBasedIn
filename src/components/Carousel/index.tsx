@@ -25,6 +25,35 @@ export default function Carousel(): JSX.Element {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    // Minimum swipe distance (in px)
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null); // Reset touch end
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            nextSlide();
+        }
+        if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
@@ -34,12 +63,26 @@ export default function Carousel(): JSX.Element {
     }, []);
 
     return (
-        <div className={styles.carouselContainer}>
-            <img
-                src={useBaseUrl(images[currentIndex])}
-                alt={`Slide ${currentIndex + 1}`}
-                className={styles.carouselImage}
-            />
+        <div
+            className={styles.carouselContainer}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+        >
+            <div
+                className={styles.carouselTrack}
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {images.map((img, idx) => (
+                    <img
+                        key={idx}
+                        src={useBaseUrl(img)}
+                        alt={`Slide ${idx + 1}`}
+                        className={styles.carouselImage}
+                    />
+                ))}
+            </div>
+
             <button
                 className={`${styles.navButton} ${styles.prevButton}`}
                 onClick={prevSlide}

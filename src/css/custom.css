@@ -5,7 +5,8 @@
  */
 
 :root {
-  --ifm-color-primary: #6366f1; /* Indigo 500 */
+  --ifm-color-primary: #6366f1;
+  /* Indigo 500 */
   --ifm-color-primary-dark: #4f46e5;
   --ifm-color-primary-darker: #4338ca;
   --ifm-color-primary-darkest: #3730a3;
@@ -17,7 +18,8 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #818cf8; /* Indigo 400 */
+  --ifm-color-primary: #818cf8;
+  /* Indigo 400 */
   --ifm-color-primary-dark: #6366f1;
   --ifm-color-primary-darker: #4f46e5;
   --ifm-color-primary-darkest: #4338ca;
@@ -38,4 +40,28 @@
 
 [data-theme='dark'] .hero__title {
   background-image: linear-gradient(to right, var(--ifm-color-primary-light), var(--ifm-color-primary-lightest));
+}
+
+/* Coming Soon Toast Styles */
+.coming-soon-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--ifm-color-primary-darker);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.coming-soon-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }

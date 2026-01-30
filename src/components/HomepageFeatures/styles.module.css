@@ -5,7 +5,21 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureBox {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--ifm-card-background-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featureBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
 }
