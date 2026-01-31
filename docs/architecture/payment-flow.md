@@ -127,7 +127,7 @@ Fetch the current nonce for the user from the backend:
 ```typescript
 async function getUserNonce(userAddress: string): Promise<number> {
   const response = await fetch(
-    `https://api.basedlink.com/api/nonce?user=${userAddress}`
+    `https://api.basedlink.com/api/nonce?user=Rp. {userAddress}`
   );
   const data = await response.json();
   return data.nonce;
@@ -255,7 +255,7 @@ async function verifySignature(paymentData: PaymentData): Promise<boolean> {
   );
   
   if (!valid) {
-    throw new Error(`Invalid signature: ${reason}`);
+    throw new Error(`Invalid signature: Rp. {reason}`);
   }
   
   return valid;
@@ -440,7 +440,7 @@ function TierSelector({ onSelect }: { onSelect: (tier: number) => void }) {
     <div>
       {Object.entries(TIER_PRICES).map(([tier, info]) => (
         <button key={tier} onClick={() => onSelect(Number(tier))}>
-          {info.name} - ${info.price}
+          {info.name} - Rp. {info.price}
         </button>
       ))}
     </div>
@@ -507,7 +507,7 @@ Nonces prevent replay attacks. The contract increments nonces on each successful
 Each `contentId` can only be used once. Use unique identifiers:
 
 ```typescript
-const contentId = `linkedin-${Date.now()}-${Math.random().toString(36)}`;
+const contentId = `linkedin-Rp. {Date.now()}-Rp. {Math.random().toString(36)}`;
 ```
 
 **Maximum length**: 64 characters

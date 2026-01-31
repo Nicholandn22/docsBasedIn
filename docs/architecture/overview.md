@@ -298,7 +298,7 @@ graph TB
 
 ### Why Base Sepolia?
 
-- **Low Fees**: Essential for micropayments ($5-$30 range)
+- **Low Fees**: Essential for micropayments (Rp. 5-Rp. 30 range)
 - **Fast Finality**: Better user experience
 - **Coinbase Integration**: Native support for Coinbase Smart Wallet
 - **EVM Compatible**: Standard Solidity development

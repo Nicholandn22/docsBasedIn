@@ -11,9 +11,9 @@ The X402PaymentProcessor implements a three-tier pricing model designed to match
 
 | Tier | Name | Price (USDC) | AI Model | Research Depth | Use Case |
 |------|------|--------------|----------|----------------|----------|
-| 1 | Basic | $5.00 | llama-3.1-8b-instant | None | Quick posts, rapid generation |
-| 2 | Pro | $15.00 | llama-3.3-70b-versatile | Standard | Professional content, quality |
-| 3 | Premium | $30.00 | llama-3.3-70b-versatile | Deep | Premium content, research-heavy |
+| 1 | Basic | Rp. 5.00 | llama-3.1-8b-instant | None | Quick posts, rapid generation |
+| 2 | Pro | Rp. 15.00 | llama-3.3-70b-versatile | Standard | Professional content, quality |
+| 3 | Premium | Rp. 30.00 | llama-3.3-70b-versatile | Deep | Premium content, research-heavy |
 
 ## Tier Details
 
@@ -187,12 +187,12 @@ const priceInUSDC = Number(price) / 1e6; // 5.0
 ```typescript
 function formatPrice(tierPrice: bigint): string {
   const usdcAmount = Number(tierPrice) / 1e6;
-  return `$${usdcAmount.toFixed(2)}`;
+  return `Rp. Rp. {usdcAmount.toFixed(2)}`;
 }
 
 // Usage
 const tier1Price = await contract.getTierPrice(1);
-console.log(formatPrice(tier1Price)); // "$5.00"
+console.log(formatPrice(tier1Price)); // "Rp. 5.00"
 ```
 
 ## Cost Comparison
@@ -203,9 +203,9 @@ For reference, typical API costs for similar generation:
 
 | Service | Model | Cost per Request | Equivalent |
 |---------|-------|------------------|------------|
-| OpenAI | GPT-4 | ~$0.30-0.60 | Between Basic & Pro |
-| Anthropic | Claude 3 | ~$0.25-0.50 | Basic tier |
-| Groq (Direct) | llama-3.3-70b | ~$0.05 | Much cheaper |
+| OpenAI | GPT-4 | ~Rp. 0.30-0.60 | Between Basic & Pro |
+| Anthropic | Claude 3 | ~Rp. 0.25-0.50 | Basic tier |
+| Groq (Direct) | llama-3.3-70b | ~Rp. 0.05 | Much cheaper |
 
 **BasedLink Value Proposition:**
 - Includes blockchain verification
@@ -220,8 +220,8 @@ For reference, typical API costs for similar generation:
 For users generating multiple pieces of content, session-based payments offer better economics:
 
 ```typescript
-// Instead of 10 individual Basic payments (10 × $5 = $50)
-// Deposit $50 once and use session balance
+// Instead of 10 individual Basic payments (10 × Rp. 5 = Rp. 50)
+// Deposit Rp. 50 once and use session balance
 await contract.deposit(parseUnits('50', 6));
 
 // Backend deducts from session balance without signatures
@@ -241,8 +241,8 @@ await contract.deposit(parseUnits('50', 6));
 - Budget constraints
 
 **ROI Consideration:**
-- $5 per post
-- If post gets 1000+ impressions: ~$0.005 per impression
+- Rp. 5 per post
+- If post gets 1000+ impressions: ~Rp. 0.005 per impression
 - Worthwhile if it saves 15+ minutes of writing time
 
 ---
@@ -258,8 +258,8 @@ await contract.deposit(parseUnits('50', 6));
 - Building personal brand
 
 **ROI Consideration:**
-- $15 per post
-- If post gets 10,000+ impressions: ~$0.0015 per impression
+- Rp. 15 per post
+- If post gets 10,000+ impressions: ~Rp. 0.0015 per impression
 - Worthwhile for content that drives leads/connections
 - Research integration saves 30-60 minutes
 
@@ -276,8 +276,8 @@ await contract.deposit(parseUnits('50', 6));
 - Research-heavy discussions
 
 **ROI Consideration:**
-- $30 per post
-- If post gets 50,000+ impressions: ~$0.0006 per impression
+- Rp. 30 per post
+- If post gets 50,000+ impressions: ~Rp. 0.0006 per impression
 - Worthwhile for high-stakes communications
 - Deep research saves 1-2 hours of work
 
@@ -404,7 +404,7 @@ async function getAllPrices(contract) {
 const requirements = await contract.getPaymentRequirements(tier);
 // Returns: { price, tokenAddress, tokenSymbol }
 
-console.log(`Pay ${formatPrice(requirements.price)} ${requirements.tokenSymbol}`);
+console.log(`Pay Rp. {formatPrice(requirements.price)} Rp. {requirements.tokenSymbol}`);
 ```
 
 ## Testnet vs Mainnet Pricing
@@ -419,6 +419,6 @@ console.log(`Pay ${formatPrice(requirements.price)} ${requirements.tokenSymbol}`
 ### Base Mainnet (Future)
 
 - **Real USDC**: Actual value required
-- **Gas Fees**: Minimal (~$0.01-0.05 per transaction)
+- **Gas Fees**: Minimal (~Rp. 0.01-0.05 per transaction)
 - **Purpose**: Production use
 - **Real Payments**: Actual charges apply

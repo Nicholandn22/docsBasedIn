@@ -581,11 +581,11 @@ async function executePaymentFlow(
 ```typescript
 // Listen for payment events
 contract.on('PaymentExecuted', (user, tier, contentId, price, event) => {
-  console.log(`Payment executed: ${user} paid ${price} for tier ${tier}`);
+  console.log(`Payment executed: Rp. {user} paid Rp. {price} for tier Rp. {tier}`);
 });
 
 // Listen for session deposits
 contract.on('SessionDeposit', (user, amount, event) => {
-  console.log(`${user} deposited ${amount} for session`);
+  console.log(`Rp. {user} deposited Rp. {amount} for session`);
 });
 ```

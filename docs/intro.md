@@ -90,7 +90,7 @@ Every piece of content is cryptographically signed:
 ### X402 Payment Protocol
 
 Blockchain-based payment verification:
-- Three pricing tiers: Basic ($5), Pro ($15), Premium ($30)
+- Three pricing tiers: Basic (Rp. 5), Pro (Rp. 15), Premium (Rp. 30)
 - EIP-712 typed signatures for secure payment authorization
 - Backend facilitator pattern for seamless UX
 - Smart contract execution with USDC payments

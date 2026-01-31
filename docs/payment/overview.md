@@ -69,9 +69,9 @@ BasedLink offers three pricing tiers:
 
 | Tier | Price | AI Model | Use Case |
 |------|-------|----------|----------|
-| Basic | $5 | llama-3.1-8b-instant | Quick posts |
-| Pro | $15 | llama-3.3-70b-versatile | Professional content |
-| Premium | $30 | llama-3.3-70b-versatile | Premium, research-heavy |
+| Basic | Rp. 5 | llama-3.1-8b-instant | Quick posts |
+| Pro | Rp. 15 | llama-3.3-70b-versatile | Professional content |
+| Premium | Rp. 30 | llama-3.3-70b-versatile | Premium, research-heavy |
 
 See [Pricing Tiers](../smart-contracts/pricing.md) for detailed comparison.
 
