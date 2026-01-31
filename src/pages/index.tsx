@@ -21,7 +21,13 @@ function HomepageHeader() {
                     <Link
                         className="button button--secondary button--lg"
                         to="/docs">
-                        Get Started 
+                        Read Docs
+                    </Link>
+
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="https://basedlink.vercel.app/">
+                        Try Website
                     </Link>
                 </div>
             </div>
