@@ -48,10 +48,28 @@ function DocumentationGallery() {
 function VideoTutorial() {
     return (
         <section className={styles.section}>
-            <Heading as="h2">Video Guide</Heading>
-            <p>Watch our intro video to get started quickly.</p>
-            <div className={styles.placeholder}>
-                <p>▶️ YouTube Video Placeholder<br />(Embed video here later)</p>
+            <div className="container">
+                <Heading as="h2">Video Guides</Heading>
+                <p>Watch our intro video and product demo to get started.</p>
+                <div className="row">
+                    <div className="col col--6">
+                        <div className={styles.videoContainer}>
+                            <iframe
+                                src="https://www.youtube.com/embed/a_IZJgiL90E"
+                                title="BasedLink Intro Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </div>
+                    </div>
+                    <div className="col col--6">
+                        <div className={styles.videoContainer}>
+                            <div className={styles.videoPlaceholderContent}>
+                                <p>🎥 Demo Video Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
