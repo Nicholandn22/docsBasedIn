@@ -64,9 +64,12 @@ function VideoTutorial() {
                     </div>
                     <div className="col col--6">
                         <div className={styles.videoContainer}>
-                            <div className={styles.videoPlaceholderContent}>
-                                <p>🎥 Demo Video Coming Soon</p>
-                            </div>
+                            <iframe
+                                src="https://www.youtube.com/embed/gkJydbpUhvw"
+                                title="BasedLink Demo Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
                         </div>
                     </div>
                 </div>

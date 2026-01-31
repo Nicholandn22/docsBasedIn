@@ -17,6 +17,18 @@ BasedLink is a gamified, AI-powered content creation platform that brings Verifi
 
 The platform combines generative AI with blockchain-based payment verification to create a next-generation content creation experience for LinkedIn and social media.
 
+## Product Demo
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/gkJydbpUhvw"
+  title="BasedLink Product Demo"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
 ## The Problem
 
 1. **Creation Block**: Creators struggle to consistently write viral, engaging content
