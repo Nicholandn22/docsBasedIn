@@ -194,8 +194,8 @@ Deploy contracts:
 
 ```bash
 forge script script/Deploy.s.sol:DeployScript \
-  --rpc-url Rp. BASE_SEPOLIA_RPC_URL \
-  --private-key Rp. PRIVATE_KEY \
+  --rpc-url $BASE_SEPOLIA_RPC_URL \
+  --private-key $PRIVATE_KEY \
   --broadcast \
   --verify
 ```

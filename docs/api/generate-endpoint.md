@@ -321,7 +321,7 @@ async function safeGenerate(topic: string) {
         case 'INVALID_MODEL':
           throw new Error('Selected model is not available');
         case 'RATE_LIMIT_EXCEEDED':
-          throw new Error(`Rate limit exceeded. Try again in Rp. {error.retryAfter}s`);
+          throw new Error(`Rate limit exceeded. Try again in ${error.retryAfter}s`);
         default:
           throw new Error(error.error || 'Generation failed');
       }

@@ -71,27 +71,27 @@ export default function Carousel(): JSX.Element {
         >
             <div
                 className={styles.carouselTrack}
-                style={{ transform: `translateX(-Rp. {currentIndex * 100}%)` }}
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {images.map((img, idx) => (
                     <img
                         key={idx}
                         src={useBaseUrl(img)}
-                        alt={`Slide Rp. {idx + 1}`}
+                        alt={`Slide ${idx + 1}`}
                         className={styles.carouselImage}
                     />
                 ))}
             </div>
 
             <button
-                className={`Rp. {styles.navButton} Rp. {styles.prevButton}`}
+                className={`${styles.navButton} ${styles.prevButton}`}
                 onClick={prevSlide}
                 aria-label="Previous Slide"
             >
                 ❮
             </button>
             <button
-                className={`Rp. {styles.navButton} Rp. {styles.nextButton}`}
+                className={`${styles.navButton} ${styles.nextButton}`}
                 onClick={nextSlide}
                 aria-label="Next Slide"
             >
@@ -101,9 +101,9 @@ export default function Carousel(): JSX.Element {
                 {images.map((_, idx) => (
                     <button
                         key={idx}
-                        className={`Rp. {styles.indicator} Rp. {idx === currentIndex ? styles.indicatorActive : ''}`}
+                        className={`${styles.indicator} ${idx === currentIndex ? styles.indicatorActive : ''}`}
                         onClick={() => setCurrentIndex(idx)}
-                        aria-label={`Go to slide Rp. {idx + 1}`}
+                        aria-label={`Go to slide ${idx + 1}`}
                     />
                 ))}
             </div>

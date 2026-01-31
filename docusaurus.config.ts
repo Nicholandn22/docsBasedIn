@@ -106,7 +106,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © Rp. {new Date().getFullYear()} BasedLink. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} BasedLink. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -187,7 +187,7 @@ const priceInUSDC = Number(price) / 1e6; // 5.0
 ```typescript
 function formatPrice(tierPrice: bigint): string {
   const usdcAmount = Number(tierPrice) / 1e6;
-  return `Rp. Rp. {usdcAmount.toFixed(2)}`;
+  return `Rp. ${usdcAmount.toFixed(2)}`;
 }
 
 // Usage
@@ -404,7 +404,7 @@ async function getAllPrices(contract) {
 const requirements = await contract.getPaymentRequirements(tier);
 // Returns: { price, tokenAddress, tokenSymbol }
 
-console.log(`Pay Rp. {formatPrice(requirements.price)} Rp. {requirements.tokenSymbol}`);
+console.log(`Pay ${formatPrice(requirements.price)} ${requirements.tokenSymbol}`);
 ```
 
 ## Testnet vs Mainnet Pricing
